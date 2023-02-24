@@ -1,0 +1,11 @@
+#include<stdio.h>
+main( )
+{
+int less,equal;
+printf("less than or equal to 10 lakhs");
+scanf("tax will be 10%");
+printf("less than or equal to 20 lakhs");
+scanf("tax will be 20%");
+printf("income is grater than 20 lakhs");
+scanf("tax will be 30%");
+}
