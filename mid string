@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(void) 
+{
+char string[] = "abcdefg";
+char from[] = "c";
+char to[]   = "f";
+char *first = strstr(string, from);
+if (first == NULL) 
+{
+first = &string[0];
+} else 
+{
+first += strlen(from);
+}
+char *last = strstr(first, to);
+if (last == NULL) 
+{
+last = &string[strlen(string)];
+}
+char *sub = calloc(strlen(string) + 1, sizeof(char));
+strncpy(sub, first, last - first);
+printf("%s\n", sub);
+free(sub);
+return 0;
+}
